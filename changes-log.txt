@@ -4,3 +4,6 @@ He has,
 1. Converted the space separated values into different independent coloums using excels inbuilt functions.
 2. after getting the values he's sorted the values on the bases of the number of elements in it then the elements the elements in the pizza.
 3. He's also come up with a way of giving each pizza a uniquely identifiable number.
+#13 January 2021:
+Sankalp made ingridientList.py, which can be used to obtain a unique sorted list of ingredients from the given file.
+This list is going to be used to determine the fieldnames for the csv file that contains all this data.

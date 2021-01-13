@@ -8,6 +8,6 @@ def ingredientList(File):
             setOfIngredients.add(i)
     return sorted(list(setOfIngredients))
 
-if(__name__ == "__main__"):
+if(__name__ == "__main__"):  #testing
     with open('a_example') as File:
         print(ingredientList(File))
