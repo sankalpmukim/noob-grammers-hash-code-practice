@@ -5,7 +5,7 @@ def CSVConverter(File):
     Writes a "data.csv" file using the DictWriter Format'''
     File.seek(0,0)
     fieldnames = ingredientList(File)
-    debug = []
+    
     with open('data.csv','w',newline='') as dataFile:
         csvFile = csv.DictWriter(dataFile,fieldnames=fieldnames)
         csvFile.writeheader()
@@ -24,5 +24,5 @@ def CSVConverter(File):
 
 
 if(__name__ == "__main__"):
-    with open('b_little_bit_of_everything.in',newline='') as File:
+    with open('e_many_teams.in',newline='') as File:
         CSVConverter(File)
