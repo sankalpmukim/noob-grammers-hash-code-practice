@@ -7,3 +7,31 @@ He has,
 #13 January 2021:
 Sankalp made ingridientList.py, which can be used to obtain a unique sorted list of ingredients from the given file.
 This list is going to be used to determine the fieldnames for the csv file that contains all this data.
+[1 Feb 2021]:
+Firstly, fill the pizza data.csv file with plenty of noIngredient pizzas
+Like around, totalNuberOfPlayers[basically, 2playerteam*2 + 3playerteam*3 etc.,] - numberOfpizzas if numberOfplayers is greater than numberOfpizzas
+which it probably is!
+then, if it is not, then just no need for any noIngredient pizzas.
+after that, consider this.
+from allCombinationsOfSelections, you pick the first combination.
+which is 1 team of 2 people
+then you would think that the first person can be n pizzas and the second person, n-1 pizzas, 
+however, you would be wrong. you can give the first person any of the unique pizzas from the n pizzas
+for example:
+in the file 'a_example':
+there are 5 pizzas but only 4 unique pizza combinations
+the reason we are doing this is:
+imagine we were not doing this:
+then we would be computing several cases in which multiple members of the same team would have gotten the SAME pizza!
+that is super non efficient as we want to get as many unique ingredients to one team as we can
+so now stop imagining this wrong world and come back:
+okay so now we can serve the first guy unique(n) pizzas and the second teammate, unique(n)-1 pizzas.
+out of these, whichever one is making the most points matters.
+basically, we don't have to decide the order for all decided teams in a selection. obviously, 
+we start with selecting 1 team to serve only, then we consider if we pick another 1 team and this all teams are checked atleast once.
+after that, we pick 2 teams out of all the teams and go through all 
+combinations of picking 2 teams.
+for each single combination, we go through every combination of pizzas that can be given to them
+AND SO ON till we get to selecting all teams TOGETHER!
+I am going to use graphs to imagine which way of picking is working the best.
+Then we can move towards an algorithm.
