@@ -19,4 +19,4 @@ def points(line):
 
 
 if __name__ == "__main__":
-    points('3 0 2 3')
+    print(points('3 0 2 3'))
