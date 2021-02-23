@@ -14,7 +14,7 @@ def allCombinationsOfSelections(File):
     totalTeams = sum([int(i) for i in allLines[0].split()[1:]])
     for i in range(1,totalTeams+1):
         allSelectionsOfTeams = (itertools.combinations(list('2'*int(allLines[0].split()[1:][0])+'3'*int(allLines[0].split()[1:][1])+'4'*int(allLines[0].split()[1:][2])),i))
-        yield(allSelectionsOfTeams)
+        yield set(allSelectionsOfTeams)
 
 if __name__ == "__main__":
     with open('a_example',newline='') as File:#b_little_bit_of_everything.in
